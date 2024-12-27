@@ -1,56 +1,62 @@
+@import "../../style.scss";
+
 .leftBar {
+  @include themify($theme) {
     flex: 2;
     position: sticky;
-    top: 70px;
-    height: calc(100vh - 70px);
+    top: 71px;
+    height: calc(100vh - 71px);
     overflow: scroll;
+    background-color: themed("bg");
+    color: themed("textColor");
 
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       display: none;
     }
-  .container {
-    padding: 20px;
+    .container {
+      padding: 20px;
 
-    hr {
-      margin: 20px 0px;
-      border: none;
-      height: 0.5px;
-      background-color: lightgrey;
-    }
-    .menu {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-
-      span {
-        font-size: 12px;
+      hr {
+        margin: 20px 0px;
+        border: none;
+        height: 0.5px;
+        background-color: themed("border");
       }
-
-      .user {
+      .menu {
         display: flex;
-        align-items: center;
-        gap: 10px;
-        img {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          object-fit: cover;
-        }
+        flex-direction: column;
+        gap: 20px;
+
         span {
-            font-size: 14px;
+          font-size: 12px;
         }
-      }
 
-      .item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        img {
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img {
             width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          span {
+            font-size: 14px;
+          }
         }
 
-        span {
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img {
+            width: 30px;
+          }
+
+          span {
             font-size: 14px;
+          }
         }
       }
     }
