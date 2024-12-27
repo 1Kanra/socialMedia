@@ -4,7 +4,15 @@
   @include themify($theme) {
     background-color: themed("bgSoft");
     color: themed("textColorSoft");
-    padding: 20px;
-    margin: 0;
+    padding: 20px 70px;
+    //margin: 0;
+    
+    @include mobile{
+      padding: 10px;
+    }
+
+    @include tablet{
+      padding: 20px;
+    }
   }
 }
